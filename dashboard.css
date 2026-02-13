@@ -1,0 +1,98 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Popup body */
+body {
+    width: 320px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    padding: 25px;
+    border-radius: 25px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.25);
+}
+
+
+
+
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #14532d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #166534;
+    transform: scale(1.1);
+}
+
+
+/* Heading */
+header h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #27ae60;
+    font-weight: 600;
+}
+
+/* Welcome text */
+.welcome-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Button area */
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* Start Button */
+.btn-start {
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #14532d, #166534);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(20, 83, 45, 0.35);
+}
+
+/* Hover */
+.btn-start:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #166534, #15803d);
+    box-shadow: 0 8px 20px rgba(20, 83, 45, 0.5);
+}
+
+/* Click effect */
+.btn-start:active {
+    transform: scale(0.95);
+}
