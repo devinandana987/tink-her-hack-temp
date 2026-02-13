@@ -26,6 +26,30 @@ body {
     box-shadow: 0 10px 25px rgba(46, 204, 113, 0.25);
 }
 
+
+
+
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #14532d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #166534;
+    transform: scale(1.1);
+}
+
+
 /* Heading */
 header h2 {
     font-size: 22px;
