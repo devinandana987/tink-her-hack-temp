@@ -64,14 +64,11 @@ Feature 4: Organized Study Vault – Stores all saved notes in one structured sp
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot1]  https://drive.google.com/file/d/16pHo0LMBQ4jgw8W6SnE3-cu-P8-l-G48/view?usp=sharing
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2]  https://drive.google.com/file/d/1ZslE6ni6-rv0SOThL0hBLGAt4FufX3rC/view?usp=sharing
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot3]  https://drive.google.com/file/d/1ew03x0KDWb2XX3J2xNOhLDl1-4kbMAtx/view?usp=sharing
 
 #### Diagrams
 
@@ -91,14 +88,10 @@ Feature 4: Organized Study Vault – Stores all saved notes in one structured sp
 ## Project Demo
 
 ### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
+https://drive.google.com/file/d/1V6JZiVCoIPl7nZNzagxntw6MSDh6bruh/view?usp=drive_link
 
-*Explain what the video demonstrates - key features, user flow, technical highlights*
 
-### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
 
----
 
 ## AI Tools Used (Optional - For Transparency Bonus)
 
