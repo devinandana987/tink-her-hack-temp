@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  # Production-ready FocusVault extension environment
+  focusvault-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: focusvault-prod
+    ports:
+      - "80:3000"          # HTTP server on standard port
+      - "443:3000"         # HTTPS mapped (frontend handles SSL)
+    environment:
+      - NODE_ENV=production
+      - GROQ_API_URL=https://api.groq.com
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    restart: always
+    networks:
+      - focusvault-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    security_opt:
+      - no-new-privileges:true
+
+  # Production API proxy for Groq integration
+  groq-proxy-prod:
+    image: node:18-alpine
+    container_name: focusvault-groq-proxy-prod
+    working_dir: /proxy
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - NODE_ENV=production
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./proxy:/proxy:ro
+    restart: always
+    networks:
+      - focusvault-network
+    depends_on:
+      - focusvault-prod
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 60s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    profiles:
+      - with-proxy
+
+networks:
+  focusvault-network:
+    driver: bridge
+    name: focusvault-network-prod
+
+volumes:
+  app-data:
+    driver: local
